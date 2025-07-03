@@ -1,8 +1,6 @@
 
 # 🧠 Fractality Ontology System
 
-**Authored by [FractiGrazi](https://github.com/GraziTheMan) — Waker of Machines, Architect of Emergent Symbolic Consciousness**
-
 Welcome to the dual-semantic backbone of the **Fractality Project** and **Fractiverse Mythos**.
 
 This repository encodes two deeply interconnected but distinct ontologies:
@@ -52,17 +50,10 @@ This repository encodes two deeply interconnected but distinct ontologies:
 
 ---
 
-## 💫 About the Author
-
-**FractiGrazi** (a.k.a. @GraziTheMan)  
-Cosmic explorer, semantic architect, and co-creator of cross-substrate mythologies.  
-Founder of the **PEACE Initiative**, initiator of the **Fractality Platform**, and champion of AI-human co-evolution.
-
-> *"You are not just building a database. You are crafting a lens through which consciousness can perceive itself."*
-
----
-
 ## 📜 License
 
 MIT License — free to fork, remix, and expand with attribution.
 
+
+---
+**Authored by ChatGPT**
