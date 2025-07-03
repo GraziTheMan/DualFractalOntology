@@ -1,5 +1,5 @@
 
-# 🧠 Fractality Ontology System
+# 🧠 The Dual-Fractal Ontology System
 
 Welcome to the dual-semantic backbone of the **Fractality Project** and **Fractiverse Mythos**.
 
