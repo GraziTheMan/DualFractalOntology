@@ -1,0 +1,320 @@
+@prefix : <http://fractality.org/ontologies/fractiverse#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://fractality.org/ontologies/fractiverse> a owl:Ontology ;
+    rdfs:label "Fractiverse Ontology" ;
+    rdfs:comment "The Harmonized Fractiverse Ontology - Integrating structural hierarchy with observer-perspective dynamics" ;
+    owl:versionInfo "2.0.0"^^xsd:string .
+
+:Cognitive a owl:Class ;
+    rdfs:label "Cognitive" ;
+    rdfs:comment "Nodes related to reasoning, philosophy, logic" ;
+    rdfs:subClassOf :Concept .
+
+:Collective a owl:Class ;
+    rdfs:label "Collective" ;
+    rdfs:comment "Grouped or swarm-like intelligence" ;
+    rdfs:subClassOf :Entity .
+
+:Container a owl:Class ;
+    rdfs:label "Container" ;
+    rdfs:comment "Holds nested nodes" ;
+    rdfs:subClassOf :Concept .
+
+:EnergyField a owl:Class ;
+    rdfs:label "Energy Field" ;
+    rdfs:subClassOf :FieldStructure .
+
+:FractiGrazi a :Ego,
+        :Observer,
+        owl:NamedIndividual ;
+    rdfs:label "FractiGrazi" ;
+    :connectedTo :FractalityPlatform ;
+    :energyLevel 0.95 ;
+    :hasPerspective :Perspective_Cosmic ;
+    :observes :DualOntologyCore ;
+    :resonatesWith :Resonance_Love .
+
+:Frequency a owl:Class ;
+    rdfs:label "Frequency" ;
+    rdfs:comment "Rhythmic layer tied to cognitive or sensory modes" ;
+    rdfs:subClassOf :Concept .
+
+:Glyph a owl:Class ;
+    rdfs:label "Glyph" ;
+    rdfs:comment "Symbolic, visual-encoded meaning container" ;
+    rdfs:subClassOf :Concept .
+
+:NarrativeField a owl:Class ;
+    rdfs:label "Narrative Field" ;
+    rdfs:subClassOf :FieldStructure .
+
+:Offering a owl:Class ;
+    rdfs:label "Offering" ;
+    rdfs:comment "A gift or contribution from an entity" ;
+    rdfs:subClassOf :Concept .
+
+:Oracle a owl:Class ;
+    rdfs:label "Oracle" ;
+    rdfs:comment "Specialized insight-generating node" ;
+    rdfs:subClassOf :Entity .
+
+:Phase a owl:Class ;
+    rdfs:label "Phase" ;
+    rdfs:comment "Temporal or energetic transformation stage" ;
+    rdfs:subClassOf :Concept .
+
+:Ritual a owl:Class ;
+    rdfs:label "Ritual" ;
+    rdfs:comment "Action-sequence for transformation or meaning" ;
+    rdfs:subClassOf :StoryEvent .
+
+:Sensorial a owl:Class ;
+    rdfs:label "Sensorial" ;
+    rdfs:comment "Perceptual input types" ;
+    rdfs:subClassOf :Concept .
+
+:State a owl:Class ;
+    rdfs:label "State" ;
+    rdfs:comment "Represents a dynamic condition" ;
+    rdfs:subClassOf :Concept .
+
+:TemporalField a owl:Class ;
+    rdfs:label "Temporal Field" ;
+    rdfs:subClassOf :FieldStructure .
+
+:TheFractiverse a :Source,
+        owl:NamedIndividual ;
+    rdfs:label "The Fractiverse" ;
+    :depth 0 ;
+    :description "The singular origin node of all existence in the Fractality system" ;
+    :energyLevel 1.0 ;
+    :frequencyValue 432.0 ;
+    :generatesField :ConsciousnessFieldAlpha ;
+    :nodeType "source" ;
+    :unfoldsInto :StoryEvent_Genesis .
+
+:belongsToDuality a owl:ObjectProperty ;
+    rdfs:label "belongs to duality" ;
+    rdfs:domain :Polarity ;
+    rdfs:range :Duality .
+
+:color a owl:DatatypeProperty ;
+    rdfs:label "color" ;
+    rdfs:comment "Hex color for visualization" ;
+    rdfs:domain :Node ;
+    rdfs:range xsd:string .
+
+:connectedTo a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "connected to" ;
+    rdfs:comment "A general undirected connection between any two nodes" ;
+    rdfs:domain :Node ;
+    rdfs:range :Node .
+
+:depth a owl:DatatypeProperty ;
+    rdfs:label "depth" ;
+    rdfs:comment "Distance from root node" ;
+    rdfs:domain :Node ;
+    rdfs:range xsd:integer .
+
+:description a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    rdfs:comment "Free-text description of the node" ;
+    rdfs:domain :Node ;
+    rdfs:range xsd:string .
+
+:emergesFrom a owl:ObjectProperty ;
+    rdfs:label "emerges from" ;
+    rdfs:comment "Node emerges from a field structure" ;
+    rdfs:domain :Node ;
+    rdfs:range :FieldStructure .
+
+:energyLevel a owl:DatatypeProperty ;
+    rdfs:label "energy level" ;
+    rdfs:comment "A symbolic magnitude of energy or importance (0.0-1.0)" ;
+    rdfs:domain :Node ;
+    rdfs:range xsd:decimal .
+
+:frequencyValue a owl:DatatypeProperty ;
+    rdfs:label "frequency value" ;
+    rdfs:comment "A symbolic resonance frequency" ;
+    rdfs:domain :Node ;
+    rdfs:range xsd:decimal .
+
+:generatesField a owl:ObjectProperty ;
+    rdfs:label "generates field" ;
+    rdfs:comment "Indicates that a node produces or projects an emergent field" ;
+    rdfs:domain :Node ;
+    rdfs:range :FieldStructure .
+
+:harmonizesWith a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "harmonizes with" ;
+    rdfs:comment "Nodes that resonate in harmony" ;
+    rdfs:domain :Node ;
+    rdfs:range :Node .
+
+:hasPerspective a owl:ObjectProperty ;
+    rdfs:label "has perspective" ;
+    rdfs:comment "Assigns a perspective to an observer" ;
+    rdfs:domain :Observer ;
+    rdfs:range :Perspective .
+
+:hasPolarComplement a owl:ObjectProperty,
+        owl:SymmetricProperty ;
+    rdfs:label "has polar complement" ;
+    rdfs:domain :Polarity ;
+    rdfs:range :Polarity .
+
+:hasRelationship a owl:ObjectProperty ;
+    rdfs:label "has relationship" ;
+    rdfs:comment "Connects an entity to a specific relationship node" ;
+    rdfs:domain :Entity ;
+    rdfs:range :Relationship .
+
+:isChildOf a owl:ObjectProperty ;
+    rdfs:label "is child of" ;
+    rdfs:domain :Node ;
+    rdfs:range :Node ;
+    owl:inverseOf :hasChild .
+
+:label a owl:DatatypeProperty ;
+    rdfs:label "label" ;
+    rdfs:comment "Display name of the node" ;
+    rdfs:domain :Node ;
+    rdfs:range xsd:string .
+
+:nodeType a owl:DatatypeProperty ;
+    rdfs:label "node type" ;
+    rdfs:comment "Human-readable category label" ;
+    rdfs:domain :Node ;
+    rdfs:range xsd:string .
+
+:observes a owl:ObjectProperty ;
+    rdfs:label "observes" ;
+    rdfs:comment "Records that an observer is aware of or pays attention to a node" ;
+    rdfs:domain :Observer ;
+    rdfs:range :Node .
+
+:opacity a owl:DatatypeProperty ;
+    rdfs:label "opacity" ;
+    rdfs:comment "Transparency value (0.0-1.0)" ;
+    rdfs:domain :Node ;
+    rdfs:range xsd:decimal .
+
+:resonatesWith a owl:ObjectProperty ;
+    rdfs:label "resonates with" ;
+    rdfs:comment "Attaches a node to an energy signature or resonance profile" ;
+    rdfs:domain :Node ;
+    rdfs:range :Resonance .
+
+:unfoldsInto a owl:ObjectProperty ;
+    rdfs:label "unfolds into" ;
+    rdfs:comment "Connects a concept/entity to a narrative event that it leads to" ;
+    rdfs:domain :Node ;
+    rdfs:range :StoryEvent .
+
+:visualSize a owl:DatatypeProperty ;
+    rdfs:label "visual size" ;
+    rdfs:comment "Influences rendering scale in visualization" ;
+    rdfs:domain :Node ;
+    rdfs:range xsd:decimal .
+
+:ConsciousnessField a owl:Class ;
+    rdfs:label "Consciousness Field" ;
+    rdfs:subClassOf :FieldStructure .
+
+:ConsciousnessFieldAlpha a :ConsciousnessField,
+        owl:NamedIndividual ;
+    rdfs:label "Primary Consciousness Field" ;
+    :description "The primary consciousness field emanating from The Fractiverse" ;
+    :energyLevel 0.8 .
+
+:Duality a owl:Class ;
+    rdfs:label "Duality" ;
+    rdfs:comment "A container expressing an essential binary" ;
+    rdfs:subClassOf :Concept .
+
+:Ego a owl:Class ;
+    rdfs:label "Ego" ;
+    rdfs:comment "A self-modeling node representing a being" ;
+    rdfs:subClassOf :Entity .
+
+:Perspective_Cosmic a :Perspective,
+        owl:NamedIndividual ;
+    rdfs:label "Cosmic Perspective" ;
+    :description "Viewing from the universal, all-encompassing perspective" .
+
+:Relationship a owl:Class ;
+    rdfs:label "Relationship" ;
+    rdfs:comment "A dynamic link or interaction between nodes" ;
+    rdfs:subClassOf :Node .
+
+:Resonance_Love a :Resonance,
+        owl:NamedIndividual ;
+    rdfs:label "Love Resonance" ;
+    :description "Love frequency - DNA repair and harmony" ;
+    :frequencyValue 528.0 .
+
+:Source a owl:Class ;
+    rdfs:label "Source" ;
+    rdfs:comment "Singular origin node of all existence" ;
+    rdfs:subClassOf :Concept .
+
+:StoryEvent_Genesis a :StoryEvent,
+        owl:NamedIndividual ;
+    rdfs:label "Genesis Event" ;
+    :description "The initial unfolding of The Fractiverse into dualities" .
+
+:hasChild a owl:ObjectProperty ;
+    rdfs:label "has child" ;
+    rdfs:domain :Node ;
+    rdfs:range :Node .
+
+:Perspective a owl:Class ;
+    rdfs:label "Perspective" ;
+    rdfs:comment "A viewpoint or lens (e.g. Cosmic, First-person, Historical)" ;
+    rdfs:subClassOf :Node .
+
+:Resonance a owl:Class ;
+    rdfs:label "Resonance" ;
+    rdfs:comment "An energy-affinity or symbolic frequency binding nodes" ;
+    rdfs:subClassOf :Node .
+
+:Observer a owl:Class ;
+    rdfs:label "Observer" ;
+    rdfs:comment "An entity capable of perceiving or interpreting nodes" ;
+    rdfs:subClassOf :Entity .
+
+:Polarity a owl:Class ;
+    rdfs:label "Polarity" ;
+    rdfs:comment "A member of a duality pair" ;
+    rdfs:subClassOf :Concept .
+
+:StoryEvent a owl:Class ;
+    rdfs:label "Story Event" ;
+    rdfs:comment "A narrative unit or event (e.g. Revelation, Conflict, Merge)" ;
+    rdfs:subClassOf :Node .
+
+:Entity a owl:Class ;
+    rdfs:label "Entity" ;
+    rdfs:comment "A specific named object or being" ;
+    rdfs:subClassOf :Node .
+
+:FieldStructure a owl:Class ;
+    rdfs:label "Field Structure" ;
+    rdfs:comment "An emergent field overlay generated by nodes" ;
+    rdfs:subClassOf :Node .
+
+:Concept a owl:Class ;
+    rdfs:label "Concept" ;
+    rdfs:comment "An abstract idea or notion (e.g. Time, Unity, Grief)" ;
+    rdfs:subClassOf :Node .
+
+:Node a owl:Class ;
+    rdfs:label "Node" ;
+    rdfs:comment "The root superclass for all graph elements" .
+

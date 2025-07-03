@@ -1,0 +1,97 @@
+@prefix fract: <http://fractality.org/ontologies/fractality#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://fractality.org/ontologies/fractality> a owl:Ontology ;
+    rdfs:label "Fractality Ontology" ;
+    rdfs:comment "Perspective-centric cognitive and rendering ontology for the Fractality system." ;
+    owl:imports <http://fractality.org/ontologies/fractiverse> .
+
+fract:Observer a owl:Class ;
+    rdfs:label "Observer" .
+
+fract:activeLayer a owl:DatatypeProperty ;
+    rdfs:label "activeLayer" ;
+    rdfs:domain fract:ObserverProfile ;
+    rdfs:range xsd:string .
+
+fract:embedsFrame a owl:ObjectProperty ;
+    rdfs:label "embedsFrame" ;
+    rdfs:domain fract:Perspective ;
+    rdfs:range fract:CognitiveFrame .
+
+fract:entersMode a owl:ObjectProperty ;
+    rdfs:label "entersMode" ;
+    rdfs:domain fract:ObserverProfile ;
+    rdfs:range fract:ResonantMode .
+
+fract:filteredBy a owl:ObjectProperty ;
+    rdfs:label "filteredBy" ;
+    rdfs:domain fract:ObserverProfile ;
+    rdfs:range fract:InterpretiveFilter .
+
+fract:focusesOn a owl:ObjectProperty ;
+    rdfs:label "focusesOn" ;
+    rdfs:domain fract:ObserverProfile ;
+    rdfs:range fract:FocusNode .
+
+fract:frameIntensity a owl:DatatypeProperty ;
+    rdfs:label "frameIntensity" ;
+    rdfs:domain fract:CognitiveFrame ;
+    rdfs:range xsd:decimal .
+
+fract:interpretsAs a owl:ObjectProperty ;
+    rdfs:label "interpretsAs" ;
+    rdfs:domain fract:ObserverProfile ;
+    rdfs:range fract:Perspective .
+
+fract:nodeLabel a owl:DatatypeProperty ;
+    rdfs:label "nodeLabel" ;
+    rdfs:domain fract:FocusNode ;
+    rdfs:range xsd:string .
+
+fract:renderStyle a owl:DatatypeProperty ;
+    rdfs:label "renderStyle" ;
+    rdfs:domain fract:FractalLens ;
+    rdfs:range xsd:string .
+
+fract:switchesTo a owl:ObjectProperty ;
+    rdfs:label "switchesTo" ;
+    rdfs:domain fract:ObserverProfile ;
+    rdfs:range fract:ViewMode .
+
+fract:usesLens a owl:ObjectProperty ;
+    rdfs:label "usesLens" ;
+    rdfs:domain fract:ObserverProfile ;
+    rdfs:range fract:FractalLens .
+
+fract:zoomLevel a owl:DatatypeProperty ;
+    rdfs:label "zoomLevel" ;
+    rdfs:domain fract:ViewMode ;
+    rdfs:range xsd:decimal .
+
+fract:InterpretiveFilter a owl:Class ;
+    rdfs:label "InterpretiveFilter" .
+
+fract:ResonantMode a owl:Class ;
+    rdfs:label "ResonantMode" .
+
+fract:CognitiveFrame a owl:Class ;
+    rdfs:label "CognitiveFrame" .
+
+fract:FocusNode a owl:Class ;
+    rdfs:label "FocusNode" .
+
+fract:FractalLens a owl:Class ;
+    rdfs:label "FractalLens" .
+
+fract:Perspective a owl:Class ;
+    rdfs:label "Perspective" .
+
+fract:ViewMode a owl:Class ;
+    rdfs:label "ViewMode" .
+
+fract:ObserverProfile a owl:Class ;
+    rdfs:label "ObserverProfile" .
+
